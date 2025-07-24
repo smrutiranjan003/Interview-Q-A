@@ -266,6 +266,3 @@ Improves read performance by creating quick lookup data structures. Uses additio
 * Write code to connect Java with MySQL locally
 
 ```
-
----
-
