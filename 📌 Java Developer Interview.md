@@ -50,7 +50,7 @@ Recently attended an interview for a **Java Developer** role and wanted to share
            System.out.println(add.operate(10, 5)); // Output: 15
        }
    }
-````
+
 
 6. **What is Serialization? What is serialVersionUID?**
 
@@ -130,7 +130,7 @@ Recently attended an interview for a **Java Developer** role and wanted to share
 
    * Implement a **custom filter/interceptor** or use **logging libraries** like Logback with HTTP logging middleware.
 
----
+```
 
 ## ✅ Final Tip
 
