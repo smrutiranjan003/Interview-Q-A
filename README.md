@@ -91,6 +91,7 @@ Pull Requests are welcome. Let’s grow together 🚀
 
 ---
 
+```
 > “Success is when preparation meets opportunity.” – Seneca
 ```
 
