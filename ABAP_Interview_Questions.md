@@ -6,96 +6,106 @@ Your one-stop guide to beginner-level ABAP interview preparation. This list cove
 
 ## 1. How to create a Table? What parameters should we consider?
 
-To create a table in SE11 (Data Dictionary):
-- Go to SE11 → Enter name → Choose "Database Table" → Create.
-- Set:
+To create a table in SE11 (Data Dictionary) in ABAP:
+- Go to transaction **SE11** → Enter name → Choose *Database Table* → Click *Create*.
+- Important settings:
   - **Delivery Class** (e.g., A for Application data)
   - **Data Class** (e.g., APPL0, APPL1)
   - **Size Category**
-  - **Fields**: Name, Data Element, Key fields
-  - **Technical settings**: Buffering, logging
+  - **Fields**: Add field name, data element, mark primary key fields
+  - **Technical settings**: Set *Data Class*, *Size Category*, enable *Buffering*
   - **Primary Key**
+  - **Save and activate**
+
+📌 *Explain to interviewer:* “I make sure to define the key fields, choose correct technical settings, and activate the table properly.”
 
 ---
 
 ## 2. What is a Transparent Table and Cluster Table?
 
-- **Transparent Table**: Directly corresponds to a single DB table, 1:1 relationship.
-- **Cluster Table**: Logical tables stored together in a single physical table. Optimized for performance in storing similar data.
+- **Transparent Table**: 1:1 mapping with DB table. Common for master/transaction data.
+- **Cluster Table**: Combines multiple logical tables into one physical table for performance optimization.
 
 ---
 
-## 3. Difference: Transparent vs Pool vs Cluster Table?
+## 3. Difference: Transparent vs Pool vs Cluster Table
 
-| Feature         | Transparent         | Pooled             | Cluster            |
-|-----------------|---------------------|---------------------|--------------------|
-| DB Representation | 1:1 with DB table | Many-to-1           | Many-to-1          |
-| Access Speed     | High               | Moderate            | High               |
-| Used For         | App data (Master/Trans.) | Internal control | Clustered data storage |
-
----
-
-## 4. What is Data Element and Domain?
-
-- **Domain**: Technical type – defines data type, length, and value range.
-- **Data Element**: Semantic layer – describes the meaning, field labels, and documentation.
+| Type        | Structure          | Use Case           |
+|-------------|--------------------|---------------------|
+| Transparent | 1:1 with DB        | Master/Trans. Data |
+| Pooled      | Many:1 (grouped)   | Internal data (texts, logs) |
+| Cluster     | Many:1 (compressed)| Similar grouped data |
 
 ---
 
-## 5. Master Data vs Transaction Data?
+## 4. What is Domain and Data Element?
 
-- **Master Data**: Static information (e.g., Customer, Material).
-- **Transaction Data**: Day-to-day operations (e.g., Sales Orders, Invoices).
+- **Domain**: Defines *technical type* (length, type, value range)
+- **Data Element**: Adds *semantic meaning* like field label, documentation
+
+📌 “Domain controls how data is stored; data element controls how it's displayed.”
 
 ---
 
-## 6. What is a SELECT query? Syntax?
+## 5. What is Master Data vs Transaction Data?
 
-Used to read records from DB tables.
+- **Master Data**: Constant info (e.g., Material, Vendor)
+- **Transaction Data**: Daily activities (e.g., Sales Orders, Deliveries)
+
+---
+
+## 6. What is SELECT query? Syntax?
+
+Used to fetch records from tables.
 
 ```abap
-SELECT * FROM ztable INTO TABLE @DATA(lt_data).
+SELECT * FROM zemployee INTO TABLE @DATA(lt_emp).
 ````
 
 ---
 
 ## 7. What is Internal Table and Work Area?
 
-* **Internal Table**: In-memory table to store multiple records.
-* **Work Area**: Single row buffer used for processing one record at a time.
+* **Internal Table**: Holds multiple rows temporarily in memory
+* **Work Area**: Single row used for operations (like buffer)
 
 ---
 
-## 8. Hello World Program in ABAP
+## 8. Simple ABAP "Hello World" Program
 
 ```abap
 REPORT zhello_world.
 WRITE: 'Hello World'.
 ```
 
-Run via **SE38** or **SA38**.
+📌 Run in **SE38** or **SA38**
 
 ---
 
 ## 9. What is a Transaction Code (T-Code)?
 
-A shortcut to launch a specific task or screen. E.g., SE11, SE80, VA01.
+A shortcut to access SAP functionality.
+Examples:
+
+* SE11 → Data Dictionary
+* SE38 → Program Editor
+* VA01 → Create Sales Order
 
 ---
 
-## 10. Types of Data Tables in SAP?
+## 10. Types of Tables in SAP
 
-* Transparent Tables
-* Pooled Tables
-* Cluster Tables
-* Buffer Tables
-* Temporary Tables
+* Transparent Table
+* Pooled Table
+* Cluster Table
+* Temporary Table
+* Buffer Table
 
 ---
 
 ## 11. What is a Selection Screen?
 
-User input screen for parameters and select-options.
+It’s where user gives input before running the program.
 
 ```abap
 PARAMETERS: p_matnr TYPE matnr.
@@ -103,82 +113,93 @@ PARAMETERS: p_matnr TYPE matnr.
 
 ---
 
-## 12. Events in ABAP Report Program?
+## 12. Events in ABAP Reports
 
-* `INITIALIZATION`
-* `AT SELECTION-SCREEN`
-* `START-OF-SELECTION`
-* `END-OF-SELECTION`
-* `TOP-OF-PAGE`, `END-OF-PAGE`
-
----
-
-## 13. What is a Selection Screen?
-
-It's the input area where users provide selection criteria for reports.
+* **INITIALIZATION**: Before screen loads
+* **AT SELECTION-SCREEN**: Validations
+* **START-OF-SELECTION**: Main logic
+* **END-OF-SELECTION**: Final actions
+* **TOP-OF-PAGE**: Page headers
 
 ---
 
-## 14. What is LOOP in ABAP?
+## 13. Difference: Selection Screen vs Report Output
 
-Iterates over internal tables.
+* *Selection Screen*: Input area
+* *Report Output*: Output after logic is executed
+
+---
+
+## 14. What is a LOOP in ABAP?
+
+Used to process internal table line-by-line.
 
 ```abap
-LOOP AT lt_data INTO ls_data.
-  WRITE: / ls_data-field.
+LOOP AT lt_emp INTO ls_emp.
+  WRITE: / ls_emp-name.
 ENDLOOP.
 ```
 
 ---
 
-## 15. What is a SAP HANA Database Table?
+## 15. What is a SAP HANA Table?
 
-Columnar, in-memory database table used in HANA optimized scenarios.
+HANA tables are:
+
+* Column-based
+* In-memory
+* Faster than classic DB tables
+  Used in modern SAP systems (S/4HANA).
 
 ---
 
 ## 16. What is a Primary Key?
 
-Unique identifier(s) for a record in the table. It avoids duplication.
+* Uniquely identifies each row
+* Avoids duplicate entries
 
 ---
 
-## 17. Client Dependent vs Independent Tables?
+## 17. Client Dependent vs Client Independent Tables
 
-* **Client Dependent**: First field is `MANDT` (client).
-* **Client Independent**: No MANDT field; shared across all clients.
-
----
-
-## 18. How to identify Client Dependent table?
-
-If the first field is `MANDT`, it's client-dependent.
+* **Client Dependent**: First field is *MANDT*
+* **Client Independent**: No MANDT field, shared across all clients
 
 ---
 
-## 19. Types of Joins in ABAP?
+## 18. How to check if a table is client dependent?
 
-* INNER JOIN
-* LEFT OUTER JOIN
-* RIGHT OUTER JOIN (rare)
-* FOR ALL ENTRIES (FAE)
+If MANDT exists as the first key field, then it is **client dependent**.
+
+---
+
+## 19. Types of Joins in ABAP
+
+* **INNER JOIN**
+* **LEFT OUTER JOIN**
+* **RIGHT OUTER JOIN**
+* **FOR ALL ENTRIES** (FAE)
+
+Example:
 
 ```abap
-SELECT a~field1 b~field2 FROM ztable1 AS a INNER JOIN ztable2 AS b ON a~id = b~id INTO TABLE @DATA(result).
+SELECT a~id b~name
+  FROM ztable1 AS a
+  INNER JOIN ztable2 AS b
+  ON a~id = b~id
+  INTO TABLE @DATA(lt_result).
 ```
 
 ---
 
-## 20. What is Delivery Class and Data Class?
+## 20. Delivery Class vs Data Class
 
-* **Delivery Class**: Controls transport behavior.
-
-  * A: App data, C: Customizing
-* **Data Class**: Controls physical storage location.
+* **Delivery Class**: Transport behavior (A = App data, C = Customizing)
+* **Data Class**: Physical storage location (APPL0, APPL1)
 
 ---
 
-## 21. How to insert data into a table?
+## 21. How to insert data in a table?
 
 ```abap
 INSERT ztable FROM ls_data.
@@ -186,57 +207,74 @@ INSERT ztable FROM ls_data.
 
 ---
 
-## 22. What is HANA?
+## 22. What is SAP HANA?
 
-High-Performance Analytic Appliance – SAP's in-memory database that stores and processes data in RAM.
-
----
-
-## 23. What is Code Push Down in HANA?
-
-Push logic to DB layer using CDS Views, AMDPs, instead of ABAP loops. Increases performance.
+* In-memory DB
+* Super fast read/write
+* Used in SAP S/4HANA systems
 
 ---
 
-## 24. Types of Enhancements?
+## 23. What is Code Push Down?
 
-* User Exits
-* Customer Exits
-* BADI
-* Implicit & Explicit Enhancements
-* Enhancement Spots
+Instead of processing logic in ABAP (slow), we shift it to HANA DB using:
 
----
+* CDS Views
+* AMDPs
 
-## 25. Types of Views in DDIC?
-
-* Database View
-* Projection View
-* Maintenance View
-* Help View
-* CDS View (Core Data Services)
+Faster performance!
 
 ---
 
-## 26. Why CDS in ABAP?
+## 24. Types of Enhancements in ABAP
 
-* Push logic to DB layer
-* Improved performance
-* Data modeling with annotations
-* Simplifies access to related data
-
----
-
-## 27. Why use Reports in SAP?
-
-To extract, analyze, and display data for business insights. Includes ALV, classical reports.
+* **User Exits**
+* **Customer Exits**
+* **BADIs**
+* **Implicit/Explicit Enhancements**
+* **Enhancement Spots**
 
 ---
 
-📘 **Bonus Tip**: Practice writing SELECT queries, using loops, and building simple reports using SE38/SE80.
+## 25. Types of Views in Data Dictionary
+
+* **Database View**
+* **Projection View**
+* **Help View**
+* **Maintenance View**
+* **CDS View**
 
 ---
 
-👨‍💻 Created by: [Smruti Ranjan](https://github.com/smrutiranjan003)
+## 26. Why use CDS Views?
 
-````
+* Better performance (code pushdown)
+* DB-level joins, filters, associations
+* Simplifies UI5/Fiori apps
+
+---
+
+## 27. Why create Reports in SAP?
+
+To:
+
+* Display business data
+* Analyze records
+* Automate processes (e.g., ALV reports, Classic reports)
+
+---
+
+## 📘 Bonus Tips
+
+✅ Practice writing `SELECT`, `LOOP`, and building small reports
+✅ Learn how to navigate SE11, SE38, SE80 confidently
+✅ Understand internal tables, joins, and views
+
+---
+
+## 👨‍💻 Created By:
+
+**Smruti Ranjan**
+GitHub: [@smrutiranjan003](https://github.com/smrutiranjan003)
+
+---
