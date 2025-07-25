@@ -1,4 +1,4 @@
-# 🚀 Interview Preparation by Smruti Ranjan
+# 🚀 Interview Preparation by Smruti Ranjan Mohapatra
 
 Welcome to my comprehensive **Interview Preparation Repository** – a curated collection of over **300+ real interview questions and answers** across Java, Python, JavaScript, MySQL, and SAP.
 
