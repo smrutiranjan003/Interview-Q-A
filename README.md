@@ -8,18 +8,18 @@ This repository is designed to help **students, freshers, and job seekers** prep
 
 ## 📦 What's Inside?
 
-| Category | File Name |
-|----------|------------|
-| 🧠 Core Java | [`JavaCoreInterviewQuestions.md`](JavaCoreInterviewQuestions.md) |
-| 🐍 Python | [`Python_Interview_Questions_Freshers.md`](Python_Interview_Questions_Freshers.md) |
-| 🌐 JavaScript | [`JavaScript_Interview_100_QA.md`](JavaScript_Interview_100_QA.md) |
-| 🐬 Java + MySQL | [`Java_MySQL_Interview_Questions_Freshers.md`](Java_MySQL_Interview_Questions_Freshers.md) |
-| 📌 Java Dev Experience | [`📌 Java Developer Interview.md`](📌%20Java%20Developer%20Interview.md) |
-| 💻 SAP ABAP Interview | [`ABAP_Interview_Questions.md`](ABAP_Interview_Questions.md) |
-| 📚 SAP Resume + Projects + Q&A | [`ABAP_Resume_Projects_InterviewAnswers.md`](ABAP_Resume_Projects_InterviewAnswers.md) |
-| 🤝 HR Interview Prep | [`HR_Interview_Questions.md`](HR_Interview_Questions.md) |
-| 🌟 SAP Fiori Interview | [`SAP_FIORI_Interview_Questions_Freshers.md`](SAP_FIORI_Interview_Questions_Freshers.md) |
-| 🧩 Full SAP Interview (Merged) | [`SAP_INTERVIEW_FULL_MERGED.md`](SAP_INTERVIEW_FULL_MERGED.md) |
+| Category                     | File Name                                                |
+|-----------------------------|-----------------------------------------------------------|
+| 🧠 Core Java                 | [`JavaCoreInterviewQuestions.md`](JavaCoreInterviewQuestions.md) |
+| 🐍 Python                   | [`Python_Interview_Questions_Freshers.md`](Python_Interview_Questions_Freshers.md) |
+| 🌐 JavaScript               | [`JavaScript_Interview_25 of 100_QA.md`](JavaScript_Interview_25%20of%20100_QA.md) |
+| 🐬 Java + MySQL             | [`Java_MySQL_Interview_Questions_Freshers.md`](Java_MySQL_Interview_Questions_Freshers.md) |
+| 📌 Java Dev Experience      | [`📌 Java Developer Interview.md`](%F0%9F%93%8C%20Java%20Developer%20Interview.md) |
+| 💻 SAP ABAP Interview       | [`ABAP_Interview_Questions.md`](ABAP_Interview_Questions.md) |
+| 📚 SAP Resume + Projects    | [`ABAP_Resume_Projects_InterviewAnswers.md`](ABAP_Resume_Projects_InterviewAnswers.md) |
+| 🤝 HR Interview Prep        | [`HR_Interview_Questions.md`](HR_Interview_Questions.md) |
+| 🌟 SAP Fiori Interview      | [`SAP_FIORI_Interview_Questions_Freshers.md`](SAP_FIORI_Interview_Questions_Freshers.md) |
+| 🧩 Full SAP Interview Merge | [`SAP_INTERVIEW_FULL_MERGED.md`](SAP_INTERVIEW_FULL_MERGED.md) |
 
 ---
 
@@ -65,7 +65,7 @@ This repository is designed to help **students, freshers, and job seekers** prep
 📁 Interview-Preparation
 ├── JavaCoreInterviewQuestions.md
 ├── Python\_Interview\_Questions\_Freshers.md
-├── JavaScript\_Interview\_100\_QA.md
+├── JavaScript\_Interview\_25 of 100\_QA.md
 ├── Java\_MySQL\_Interview\_Questions\_Freshers.md
 ├── 📌 Java Developer Interview\.md
 ├── ABAP\_Interview\_Questions.md
@@ -81,7 +81,7 @@ This repository is designed to help **students, freshers, and job seekers** prep
 
 ## ✨ Author
 
-Made with ❤️ by [Smruti Ranjan](https://github.com/smrutiranjan003)
+Made with ❤️ by [Smruti Ranjan Mohapatra](https://github.com/smrutiranjan003)
 
 ---
 
@@ -92,3 +92,6 @@ Pull Requests are welcome. Let’s grow together 🚀
 ---
 
 > “Success is when preparation meets opportunity.” – Seneca
+```
+
+---
