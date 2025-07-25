@@ -27,6 +27,65 @@ This gave me end-to-end RAP hands-on experience including backend logic and fron
 
 ---
 
+# 👨‍💻 SAP ABAP Resume Projects & Interview Answers
+
+This file includes a structured summary of my ABAP profile, RAP project experience, core concepts, and HR/technical interview answers — perfect for GitHub portfolio and interviews.
+
+---
+
+## 🙋‍♂️ Tell Me About Yourself
+
+"My name is **Smruti Ranjan Mohapatra**, a final-year B.Tech (CSE) student. I'm currently undergoing **SAP ABAP training under Skill Odisha**.
+
+During my training, I built a complete **Employee Master RAP application** using **CDS**, **behavior definition**, and **OData V4**, which I successfully **deployed on SAP BTP Cloud Foundry**. I enjoy backend development and exploring new SAP technologies."
+
+---
+
+## 🚀 Real Project Experience: Employee Master App (RAP Model)
+
+### 🔧 Tech Stack Used
+- CDS Views
+- Behavior Definition (Managed)
+- Service Definition & Binding (OData V4)
+- Fiori Elements
+- SAP BTP Cloud Foundry
+- Eclipse ADT
+
+### 📌 Steps Taken
+
+1. **Created DB Table**:  
+   `ZTB_RAP_EMP_887` with fields like `EmpID`, `Name`, `Address`, `Dept`.
+
+2. **CDS Root View & Projection View**:  
+   Used annotations like `@UI.lineItem`, `@UI.selectionField`.
+
+3. **Behavior Definition & Implementation**:  
+   Defined CRUD operations with `managed implementation`.
+
+4. **Service Definition & Binding**:  
+   Created `ZUI_EMP_SRV`, exposed via OData V4.
+
+5. **Fiori Integration**:  
+   Used Fiori List Report + Object Page templates.
+
+6. **Deployment**:  
+   Used **"Deploy to SAP BTP"** via Eclipse ADT.
+
+### 🧠 What I Learned
+This project helped me understand:
+- End-to-end RAP architecture
+- Cloud deployment via SAP BTP
+- CDS annotations & Fiori integration
+
+---
+
+## 📚 Mini Project Experience
+
+- **ALV Report**: Displayed `MARA` data using `REUSE_ALV_GRID_DISPLAY`.
+- **CDS + OData**: Built a CDS View → Exposed via `@OData.publish: true` → Registered in `/IWFND/MAINT_SERVICE`.
+
+---
+
 ## 3. Types of CDS Views?
 - **ABAP CDS Views**: 
   - Basic View 
