@@ -1,11 +1,10 @@
-# 🚀 SAP FIORI Interview Q&A for Freshers
-
+# 🚀 SAP FIORI Resume Projects & 👨‍💻 Interview Q&A for Freshers
 ## 👋 Tell Me About Yourself
 
-**Smruti Ranjan Mohapatra**  
-Final-year B.Tech CSE student | SAP ABAP trainee (Skill Odisha)  
-Built RAP-based Employee Master App using CDS, Behavior Definition, and deployed on SAP BTP.  
-Passionate about backend development and modern SAP technologies.
+🙋‍♂️ **Smruti Ranjan Mohapatra**  
+"My name is **Smruti Ranjan Mohapatra**, a final-year B.Tech (CSE) student. I'm currently undergoing **SAP ABAP training under Skill Odisha**.
+
+During my training, I built a complete **Employee Master RAP application** using **CDS**, **behavior definition**, and **OData V4**, which I successfully **deployed on SAP BTP Cloud Foundry**. I enjoy backend development and exploring new SAP technologies."
 
 ---
 
@@ -47,15 +46,19 @@ JavaScript-based UI development toolkit from SAP used to build Fiori apps.
 - Deployment steps and UX principles
 
 ---
-## 📌 Real-World Mini Project: RAP-Based Employee App
+## 🚀 Real-World Mini Project Experience: 📌 RAP-Based Employee Master App (RAP Model)
 
 ### Title: Employee Master Management App
 
-#### 🔧 Technologies Used
+### 🔧 Tech Stack Used
+- CDS Views
 - RAP (RESTful ABAP Programming Model)
-- CDS, Behavior Definition & Implementation
-- SAP BTP (Cloud Foundry Deployment)
+- Behavior Definition & Implementation (Managed)
+- Service Definition & Binding (OData V4)
 - Fiori Elements
+- SAP BTP (Cloud Foundry Deployment)
+- Eclipse ADT
+
 
 #### 🧱 Key Steps
 1. Created DB Table: `ZTB_RAP_EMP_887`
@@ -64,6 +67,41 @@ JavaScript-based UI development toolkit from SAP used to build Fiori apps.
 4. Built Behavior Definition for CRUD ops
 5. Exposed via OData V4 (Service Def. + Binding)
 6. Deployed to SAP BTP & tested via Fiori Launchpad
+
+---
+
+### 📌 Steps Taken
+
+1. **Created DB Table**:  
+   `ZTB_RAP_EMP_887` with fields like `EmpID`, `Name`, `Address`, `Dept`.
+
+2. **CDS Root View & Projection View**:  
+   Used annotations like `@UI.lineItem`, `@UI.selectionField`.
+
+3. **Behavior Definition & Implementation**:  
+   Defined CRUD operations with `managed implementation`.
+
+4. **Service Definition & Binding**:  
+   Created `ZUI_EMP_SRV`, exposed via OData V4.
+
+5. **Fiori Integration**:  
+   Used Fiori List Report + Object Page templates.
+
+6. **Deployment**:  
+   Used **"Deploy to SAP BTP"** via Eclipse ADT.
+
+### 🧠 What I Learned
+This project helped me understand:
+- End-to-end RAP architecture
+- Cloud deployment via SAP BTP
+- CDS annotations & Fiori integration
+
+---
+
+## 📚 Mini Project Experience
+
+- **ALV Report**: Displayed `MARA` data using `REUSE_ALV_GRID_DISPLAY`.
+- **CDS + OData**: Built a CDS View → Exposed via `@OData.publish: true` → Registered in `/IWFND/MAINT_SERVICE`.
 
 ---
 
