@@ -267,14 +267,16 @@ To:
 ## 📘 Bonus Tips
 
 ✅ Practice writing `SELECT`, `LOOP`, and building small reports
+
 ✅ Learn how to navigate SE11, SE38, SE80 confidently
+
 ✅ Understand internal tables, joins, and views
 
 ---
 
 ## 👨‍💻 Created By:
 
-**Smruti Ranjan**
+**Smruti Ranjan Mohapatra**
 GitHub: [@smrutiranjan003](https://github.com/smrutiranjan003)
 
 ---
